@@ -1,0 +1,317 @@
+* {
+    margin:0;
+    padding:0;
+
+}
+/* transition: <property> <duration> <timing-function> <delay>; */
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 1em 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+video {
+width: 100%;
+margin-top: 2em;
+
+}
+/*Alles header*/
+
+body > header {
+    top: 0;
+    width: 100%;
+    background-color: #ffcc00;
+    box-shadow: 0 30px 50px 0 rgba(0,0,0,4.5);
+}
+
+body > header h1 {
+    text-align:center;
+    padding: 0.5em 0;
+    text-shadow: 2px 2px #ff0000;
+}
+
+body > header p {
+    text-align: center;
+}
+
+body > header img {
+    display:block;
+    width: 90%;
+    margin: 1em auto;
+}
+
+
+body > header nav ul li {
+    background-color: rgba (0,0,0,0,5);
+    text-align: center;
+    margin-top: .5em;
+}
+/*Pseudo-classes*/
+body > header nav ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.8);
+}
+
+body > header nav ul li a {
+    color: white;
+    height: 2em;
+    line-height: 2em;
+    text-decoration: none;
+}
+
+body > header form {
+
+    display: block;
+    width: 50%;
+    float: left;
+    height: 3em;
+    line-height: 3em;
+    padding: 0.5em;
+}
+
+body > header form input {
+    width: 70%;
+}
+
+body > header form button {
+    width: 30%;
+}
+
+body > header form label {
+    font-size: 0;
+}
+/*atribute selector*/
+body > header p.to-profile a {
+    display: block;
+    float: right;
+    width: 50%;
+    height: 3em;
+    line-height: 3em;
+}
+
+body > header p.to-profile a {
+    color: black;
+    text-decoration: none;
+    opacity: .5;
+}
+
+body > header p.to-profile a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* Alles main */
+
+body> main {
+    padding: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+body > main h3 {
+    margin: 1em;
+}
+
+main > article > section > img {
+    width:40%;
+    opacity: 0.5;
+    -webkit-transition: width 4s; /* Safari */
+    transition: width 2s;
+    margin-left: 15%;
+}
+
+main > article > section > img:hover {
+    width: 70%;
+    opacity: 1;
+    z-index: 1;
+    }
+
+/* Alles section */
+
+
+
+
+body > section {
+
+    background-color: #efefef;
+    box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.5);
+    padding: 1em;
+}
+
+body > section article {
+    padding-bottom: 1em;
+    margin-top: 1em;
+
+}
+
+ body > section p {
+    display: none;
+}
+
+body > section header p {
+    display: block;
+}
+
+body > section footer p {
+    display: block;
+}
+
+/* Alles Aside */
+body > aside {
+    background-color: darkgrey;
+    padding: 1em;
+
+}
+
+body > aside  article {
+    margin-top: 2em;
+}
+
+body > aside > section {
+    margin-bottom: 2em;
+}
+
+/* Alles Footer */
+
+body > footer {
+    background-color: #333;
+    padding: 1em;
+    color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*universal*/
+body > footer > * {
+    flex-basis: 10em;
+    flex-grow: 1;
+    background-color: red;
+    border-style: dotted;
+}
+
+body > footer #sitemap {
+    flex-basis: 100%;
+
+}
+
+body > footer #sitemap > ul {
+    display: flex;
+    margin-left: 3em;
+}
+
+body > footer #sitemap > ul li a {
+    color: white;
+}
+
+body > footer > p:last-of-type {
+    flex-basis: 100%;
+    margin: 1em 0;
+    text-align: center;
+}
+/* Alles Responsive */
+@media screen and (min-width: 50em){
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > header {
+        flex-basis: 100%;
+        z-index: 15;
+
+    }
+
+     body > header nav ul {
+    display: flex;
+
+    }
+
+    body > header nav ul li {
+        flex-grow: 1;
+    }
+
+    body > header > * {
+        z-index: 15;
+    }
+
+    body > header img {
+        width: 25em;
+        position: absolute;  /*afbeelding positie*/
+        z-index: 1;
+        opacity: .2;
+        top: 0;
+        left: 5em;
+        transform: rotate(-10deg);
+    }
+
+    body > header nav {
+        margin-top: 1em;
+    }
+
+    body > main {
+        flex-basis: 25em;
+        flex-grow: 1;
+        background-color: lightgreen;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    body > section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        order: 1;
+    }
+
+    body > section > article {
+        margin-right: 2em;
+        border: none;
+    }
+
+        body > section > h2 {
+        position: absolute;
+        top: 0;
+    }
+
+    body > aside {
+    flex-basis: 15em;
+    box-shadow: -2px 0 2px 0 rgba(0,0,0,0.5);
+    }
+}
+
+@media screen and (min-width: 20em) and (max-width:50em){
+
+    body > main {
+        background-color: lightblue;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    body > footer #sitemap > ul {
+    display: inherit;
+    margin-left: 3em;
+}
+
+}
+
